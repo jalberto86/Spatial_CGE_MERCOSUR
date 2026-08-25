@@ -1,0 +1,144 @@
+{
+  "built_utc": "2026-08-19T14:11:16.637554+00:00",
+  "base_year": 2018,
+  "pool_definition": "accepted continuous fitted p_hat row exists AND native_2018 == 1 AND country_aez decodes to supported MERCOSUR country AND AEZ in 1..18",
+  "future_landcover_filter_used": false,
+  "p_hat_source": "accepted biome-specific *_oos_scores.parquet",
+  "p_hat_storage_dtype": "float64",
+  "region_map": {
+    "1": "BRA",
+    "2": "ARG",
+    "3": "PRY",
+    "4": "URY",
+    "5": "BOL"
+  },
+  "grid_shape": [
+    6725,
+    5032
+  ],
+  "grid_transform": [
+    1000.0,
+    0.0,
+    -1527000.0,
+    0.0,
+    -1000.0,
+    4210000.0
+  ],
+  "grid_crs": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"Unknown based on GRS 1980 ellipsoid\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Albers_Conic_Equal_Area\"],PARAMETER[\"latitude_of_center\",-32],PARAMETER[\"longitude_of_center\",-60],PARAMETER[\"standard_parallel_1\",-5],PARAMETER[\"standard_parallel_2\",-42],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "grid_meta_source": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\grid\\grid_meta.json",
+  "grid_meta": {
+    "crs_proj4": "+proj=aea +lat_1=-5 +lat_2=-42 +lat_0=-32 +lon_0=-60 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+    "resolution_m": 1000.0,
+    "width": 5032,
+    "height": 6725,
+    "transform": [
+      1000.0,
+      0.0,
+      -1527000.0,
+      0.0,
+      -1000.0,
+      4210000.0
+    ],
+    "bounds_target_crs": [
+      -1527000.0,
+      -2515000.0,
+      3505000.0,
+      4210000.0
+    ],
+    "bounds_wgs84": [
+      -80.57389696867193,
+      -54.090778179261996,
+      -30.712794786730793,
+      8.592360878984666
+    ],
+    "region_block": 5,
+    "layers": [
+      "country.tif",
+      "aez.tif",
+      "biome.tif",
+      "country_aez.tif",
+      "region_id.tif"
+    ]
+  },
+  "n_pixels": 5776691,
+  "expected_n_pixels": 5776691,
+  "per_biome": {
+    "amazonia": 3749738,
+    "cerrado": 1002510,
+    "chaco": 866087,
+    "pantanal": 158356
+  },
+  "per_region": {
+    "ARG": 513433,
+    "BOL": 362954,
+    "BRA": 4653371,
+    "PRY": 246933
+  },
+  "per_region_biome": {
+    "ARG|chaco": 513433,
+    "BOL|amazonia": 212462,
+    "BOL|cerrado": 5861,
+    "BOL|chaco": 113898,
+    "BOL|pantanal": 30733,
+    "BRA|amazonia": 3537276,
+    "BRA|cerrado": 990334,
+    "BRA|pantanal": 125761,
+    "PRY|cerrado": 6315,
+    "PRY|chaco": 238756,
+    "PRY|pantanal": 1862
+  },
+  "biome_build_audit": {
+    "amazonia": {
+      "source_rows": 3755132,
+      "dropped_native_2018_not_1": 3225,
+      "dropped_invalid_country_aez_after_native_filter": 2169,
+      "final_rows": 3749738,
+      "p_hat_min": 8.197554807452309e-146,
+      "p_hat_max": 0.9999927990047736,
+      "p_hat_unique": 3749738
+    },
+    "cerrado": {
+      "source_rows": 1003651,
+      "dropped_native_2018_not_1": 1030,
+      "dropped_invalid_country_aez_after_native_filter": 111,
+      "final_rows": 1002510,
+      "p_hat_min": 6.098636465315041e-15,
+      "p_hat_max": 0.9554449155384005,
+      "p_hat_unique": 1002510
+    },
+    "chaco": {
+      "source_rows": 866525,
+      "dropped_native_2018_not_1": 438,
+      "dropped_invalid_country_aez_after_native_filter": 0,
+      "final_rows": 866087,
+      "p_hat_min": 3.147345902313692e-41,
+      "p_hat_max": 0.9770076590994456,
+      "p_hat_unique": 866087
+    },
+    "pantanal": {
+      "source_rows": 160301,
+      "dropped_native_2018_not_1": 1945,
+      "dropped_invalid_country_aez_after_native_filter": 0,
+      "final_rows": 158356,
+      "p_hat_min": 2.0957879702290278e-10,
+      "p_hat_max": 0.8968352202996718,
+      "p_hat_unique": 158356
+    }
+  },
+  "sources": {
+    "country_aez": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\grid\\country_aez.tif",
+    "native_2018": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\landcover\\native_2018.tif",
+    "scores": {
+      "amazonia": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\scores\\amazonia_slx_nodap_cc_oos_scores.parquet",
+      "cerrado": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\scores\\cerrado_slx_nodap_oos_scores.parquet",
+      "chaco": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\scores\\chaco_slx_nodap_oos_scores.parquet",
+      "pantanal": "C:\\Users\\JesusMERCADO\\GAMSProjects\\GTAP_AEZ\\rdyn\\allocator\\inputs\\scores\\pantanal_noslx_nodap_oos_scores.parquet"
+    }
+  },
+  "integrity": {
+    "duplicate_pixel_id": 0,
+    "p_hat_finite": true,
+    "p_hat_in_0_1": true,
+    "p_hat_all_unique": true
+  }
+}

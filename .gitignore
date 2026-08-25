@@ -1,0 +1,73 @@
+@'
+
+# ============================================================
+# Input data files
+# ============================================================
+
+Input/
+
+# ============================================================
+# Files intentionally excluded from the repository
+# ============================================================
+
+# Superseded / experimental generic launcher
+rdyn.gms
+
+# Markdown worklogs / local documentation
+*.md
+
+# ============================================================
+# GAMS generated files
+# ============================================================
+
+*.log
+*.lst
+*.lxi
+
+# Final scenario GDX results are retained locally but not versioned
+output/*.gdx
+
+# Aggregation/build outputs
+outdir/*.gdx
+
+
+# ============================================================
+# Python
+# ============================================================
+
+__pycache__/
+*.pyc
+*.pyo
+
+
+# ============================================================
+# R / RStudio session files
+# ============================================================
+
+.RData
+.Rhistory
+.Rproj.user/
+
+
+# ============================================================
+# OS / editor debris
+# ============================================================
+
+Thumbs.db
+.DS_Store
+*~
+'@ | Set-Content -Encoding UTF8 .gitignore
+
+
+# ============================================================
+# Allocator generated data
+# ============================================================
+
+# Spatial / allocation outputs
+allocator/outputs/
+
+# Downstream analyses
+allocator/analysis/
+
+# Large generated pixel master
+allocator/allocator_pixels.parquet
